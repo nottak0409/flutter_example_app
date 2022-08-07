@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class NextPage extends StatelessWidget {
   NextPage(this.id);
   int id;
+  final items = List<String>.generate(100, (i) => "Item $i");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,8 +13,14 @@ class NextPage extends StatelessWidget {
       ),
       body: Container(
         color: Colors.red,
-        child: Text(id.toString()),
-      ),
+        child: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text('${items[index]}'),
+            );
+          },
+        ),      ),
     );
   }
 }
