@@ -91,13 +91,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     fontStyle: FontStyle.italic,
                     decoration: TextDecoration.underline
                 )),
-            Text('テスト'),
+            Text(name),
             TextField(
               decoration: InputDecoration(
                 hintText: '名前',
               ),
               onChanged: (text) {
-                name = text;
+                setState(() {
+                  name = text;
+                });
               },
             ),
             TextField(
