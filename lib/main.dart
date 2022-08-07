@@ -79,7 +79,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => NextPage(1)),
                 );
               },
-            )
+            ),
+            Text('test',
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.green,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    decoration: TextDecoration.underline
+                )),
+            Text('テスト'),
           ]
         )
       ),
