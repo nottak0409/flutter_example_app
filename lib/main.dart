@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './next_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -82,7 +83,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: RaisedButton(
           child: Text("次へ"),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => NextPage()),
+            );
+          },
         ),
       ),
       floatingActionButton: FloatingActionButton(
